@@ -56,7 +56,7 @@ def mk_cost_lines(x,y,w,b, ax):
         ctot += c_p
     ctot = ctot/(len(x))
     cstr = cstr[:-1] + f") = {ctot:0.0f}"
-    ax.text(0.15,0.02,cstr, transform=ax.transAxes, color=dlpurple)
+    ax.text(0.15,0.02,cstr, transform=ax.transAxes,color=dlpurple)
 
 ##########
 # Cost lab
@@ -64,8 +64,10 @@ def mk_cost_lines(x,y,w,b, ax):
 
 
 def plt_intuition(x_train, y_train):
-
+    
+    # set range to 0-400
     w_range = np.array([200-200,200+200])
+    # a temporary bias value has been set to 100
     tmp_b = 100
 
     w_array = np.arange(*w_range, 5)
